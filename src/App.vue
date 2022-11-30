@@ -26,7 +26,7 @@ export default {
   },
 
   mounted() {
-    this.GetFilm();
+    this.GetFilm('');
   },
   methods: {
     GetFilm(value) {

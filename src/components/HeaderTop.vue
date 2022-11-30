@@ -56,7 +56,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .superContainer{
-  height: 9vh;
+  height: 10vh;
 }
 img{
   width: 10%;
