@@ -1,6 +1,6 @@
 <template>
   <div class="listFilm">
-   <CardList v-for="(element, index) in secPropsFilm" :key="index" :CardProps="element"/>
+   <CardList v-for="(element, index) in secPropsFilm" :key="index" :CardPropsFilm="element"/>
   </div>
 </template>
 
@@ -24,5 +24,6 @@ export default {
 .listFilm{
   display: flex;
   flex-wrap: wrap;
+  height: 100%;
 }
 </style>

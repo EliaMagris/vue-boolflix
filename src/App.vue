@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <HeaderTop @search="GetFilm" />
-    <MainTop :propsFilm ="infoFilm" :propsSerie ="infoSerie"/>
+    <MainTop :propsFilm="infoFilm" :propsSerie="infoSerie" />
   </div>
 </template>
 
@@ -43,7 +43,7 @@ export default {
         .then((response) => {
           this.infoSerie = response.data.results;
         });
-     },
+    },
   },
 };
 </script>
@@ -53,9 +53,12 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  background-color: #e50914;
+  height: 100%;
   color: #2c3e50;
   margin: 0;
   padding: 0;
+  // overflow-y: hidden;
+  // white-space: nowrap;
 }
 </style>
