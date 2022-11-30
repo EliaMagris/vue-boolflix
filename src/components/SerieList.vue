@@ -1,30 +1,34 @@
 <template>
-  <div class="listSerie">
-   <CardSerie v-for="(element, index) in secPropsSerie" :key="index" :CardPropsSerie="element"/>
+  <div class="mainContainer">
+    <h1 class="text-white px-5">Series tv</h1>
+    <div class="listSerie">
+      <CardSerie v-for="(element, index) in secPropsSerie" :key="index" :CardPropsSerie="element" />
+    </div>
   </div>
 </template>
 
 <script>
-
-import CardSerie from './CardSerie.vue'
+import CardSerie from './CardSerie.vue';
 
 export default {
   name: 'SerieList',
-  components:{
-    CardSerie
+  components: {
+    CardSerie,
   },
   props: {
-    secPropsSerie: Array
-  }
-  
-}
+    secPropsSerie: Array,
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.listSerie{
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 100px;
+.mainContainer {
+  margin-top: 200px;
+
+  .listSerie {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 </style>

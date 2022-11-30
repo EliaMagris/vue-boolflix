@@ -1,6 +1,6 @@
 <template>
-  <div >
-   <FilmList :secPropsFilm="propsFilm"/>
+  <div class="overflow-auto roberto">
+   <FilmList class="film" :secPropsFilm="propsFilm"/>
    <SerieList :secPropsSerie="propsSerie"/>
   </div>
 </template>
@@ -27,5 +27,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.roberto{
+  height: 85vh;
+}
 
 </style>

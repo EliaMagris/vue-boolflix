@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="superContainer">
     <nav class="navbar navbar-expand-lg bg-black w-100">
       <div class="container-fluid d-flex align-items-center">
         <img class="img" src="../assets/Netflix_2015_logo.svg.png">
@@ -55,6 +55,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.superContainer{
+  height: 9vh;
+}
 img{
   width: 10%;
 }

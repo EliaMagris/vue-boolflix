@@ -53,12 +53,14 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #e50914;
-  height: 100%;
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(53, 10, 3)) ;
   color: #2c3e50;
   margin: 0;
   padding: 0;
+  position: relative;
   // overflow-y: hidden;
   // white-space: nowrap;
+  height: 100vh;
+
 }
 </style>

@@ -1,6 +1,10 @@
 <template>
-  <div class="listFilm">
-   <CardList v-for="(element, index) in secPropsFilm" :key="index" :CardPropsFilm="element"/>
+  <div class="mainContainer">
+    <h1 class="text-white px-5">Film</h1>
+    <div class="listFilm">
+      <CardList v-for="(element, index) in secPropsFilm" :key="index" :CardPropsFilm="element"/>
+    </div>
+   
   </div>
 </template>
 
@@ -21,9 +25,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.listFilm{
-  display: flex;
-  flex-wrap: wrap;
-  height: 100%;
+.mainContainer {
+  margin-top: 50px;
+
+  .listFilm {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 </style>
