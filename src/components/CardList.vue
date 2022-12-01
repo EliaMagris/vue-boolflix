@@ -30,7 +30,21 @@
       <div class="container text-left">
         <div class="container_foto">
           <div class="ver_mas text-center">
-            <span class="lnr lnr-eye"><font-awesome-icon icon="fa-solid fa-eye" /></span>
+            <span class="lnr lnr-eye">
+              <div class="dropdown">
+                <button
+                  class="btn btn-black dropdown-toggle border-0"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <font-awesome-icon icon="fa-solid fa-eye" />
+                </button>
+                <ul class="dropdown-menu bg-black">
+                  <li><a class="dropdown-item text-light index" href="#">{{CardPropsFilm.overview}}</a></li>
+                </ul>
+              </div>
+            </span>
           </div>
           <article class="text-left">
             <h5>{{ CardPropsFilm.title }}</h5>
@@ -53,6 +67,7 @@
               <font-awesome-icon icon="fa-solid fa-star" class="text-warning" v-for="index in this.vote" :key="index" />
               <font-awesome-icon icon="fa-regular fa-star" v-for="index in 5 - this.vote" :key="index" />
             </p>
+            <!-- <div><p>{{CardPropsFilm.overview}}</p></div> -->
           </article>
           <img :src="`http://image.tmdb.org/t/p/w342/${CardPropsFilm.backdrop_path}`" alt="" />
         </div>
@@ -77,6 +92,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
+.dropdown-menu{
+  overflow: auto;
+  word-break: keep-all;
+  word-wrap: break-word;
+  width: 100%;
+
+  ::-webkit-scrollbar {
+  width: 5px;
+}
+}
 .containerCard {
   width: calc(100% / 4);
 }
@@ -151,7 +177,7 @@ export default {
   position: relative;
   margin: 0 auto;
   width: 100%;
-  top: -4px;
+  top: -6px;
 }
 
 /*hovers*/
