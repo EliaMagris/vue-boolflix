@@ -1,31 +1,5 @@
 <template>
   <div class="containerCard">
-    <!-- <div class="card" style="width: 18rem">
-      <img :src="`http://image.tmdb.org/t/p/w342/${CardPropsFilm.backdrop_path}`" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">{{ CardPropsFilm.title }}</h5>
-        <p class="card-text text-uppercase">
-          <span
-            :class="
-              CardPropsFilm.original_language == 'en'
-                ? 'fi fi-us'
-                : `fi fi-${CardPropsFilm.original_language}` && CardPropsFilm.original_language == 'ja'
-                ? 'fi fi-jp'
-                : `fi fi-${CardPropsFilm.original_language}` && CardPropsFilm.original_language == 'hi'
-                ? 'fi fi-in'
-                : `fi fi-${CardPropsFilm.original_language}` && CardPropsFilm.original_language == 'ko'
-                ? 'fi fi-kr'
-                : `fi fi-${CardPropsFilm.original_language}`
-            "
-          /><span />
-        </p>
-        <p class="card-text">
-          Voto:
-          <font-awesome-icon icon="fa-solid fa-star" class="text-warning" v-for="index in this.vote" :key="index" />
-          <font-awesome-icon icon="fa-regular fa-star" v-for="index in 5 - this.vote" :key="index" />
-        </p>
-      </div>
-    </div> -->
     <div class="container-fluid contenedor">
       <div class="container text-left">
         <div class="container_foto">
@@ -41,7 +15,11 @@
                   <font-awesome-icon icon="fa-solid fa-eye" />
                 </button>
                 <ul class="dropdown-menu bg-black">
-                  <li><a class="dropdown-item text-light index" href="#">{{CardPropsFilm.overview}}</a></li>
+                  <li>
+                    <a class="dropdown-item text-light index" href="#">{{
+                      CardPropsFilm.overview
+                    }}</a>
+                  </li>
                 </ul>
               </div>
             </span>
@@ -52,11 +30,14 @@
               :class="
                 CardPropsFilm.original_language == 'en'
                   ? 'fi fi-us'
-                  : `fi fi-${CardPropsFilm.original_language}` && CardPropsFilm.original_language == 'ja'
+                  : `fi fi-${CardPropsFilm.original_language}` &&
+                    CardPropsFilm.original_language == 'ja'
                   ? 'fi fi-jp'
-                  : `fi fi-${CardPropsFilm.original_language}` && CardPropsFilm.original_language == 'hi'
+                  : `fi fi-${CardPropsFilm.original_language}` &&
+                    CardPropsFilm.original_language == 'hi'
                   ? 'fi fi-in'
-                  : `fi fi-${CardPropsFilm.original_language}` && CardPropsFilm.original_language == 'ko'
+                  : `fi fi-${CardPropsFilm.original_language}` &&
+                    CardPropsFilm.original_language == 'ko'
                   ? 'fi fi-kr'
                   : `fi fi-${CardPropsFilm.original_language}`
               "
@@ -64,12 +45,24 @@
             <div />
             <p class="card-text text-white">
               Voto:
-              <font-awesome-icon icon="fa-solid fa-star" class="text-warning" v-for="index in this.vote" :key="index" />
-              <font-awesome-icon icon="fa-regular fa-star" v-for="index in 5 - this.vote" :key="index" />
+              <font-awesome-icon
+                icon="fa-solid fa-star"
+                class="text-warning"
+                v-for="index in this.vote"
+                :key="index"
+              />
+              <font-awesome-icon
+                icon="fa-regular fa-star"
+                v-for="index in 5 - this.vote"
+                :key="index"
+              />
             </p>
             <!-- <div><p>{{CardPropsFilm.overview}}</p></div> -->
           </article>
-          <img :src="`http://image.tmdb.org/t/p/w342/${CardPropsFilm.backdrop_path}`" alt="" />
+          <img
+            :src="`http://image.tmdb.org/t/p/w342/${CardPropsFilm.backdrop_path}`"
+            alt=""
+          />
         </div>
       </div>
     </div>
@@ -78,7 +71,7 @@
 
 <script>
 export default {
-  name: 'CardList',
+  name: "CardList",
   props: {
     CardPropsFilm: Object,
   },
@@ -92,16 +85,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
-.dropdown-menu{
+.dropdown-menu {
   overflow: auto;
   word-break: keep-all;
   word-wrap: break-word;
   width: 100%;
 
-  ::-webkit-scrollbar {
-  width: 5px;
-}
+  .dropdown-item:hover {
+    background-color: black !important;
+  }
 }
 .containerCard {
   width: calc(100% / 4);
