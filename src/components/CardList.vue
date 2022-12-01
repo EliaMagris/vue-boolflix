@@ -29,8 +29,8 @@
     <div class="container-fluid contenedor">
       <div class="container text-left">
         <div class="container_foto">
-          <div class="ver_mas text-left">
-            <span class="lnr lnr-eye"></span>
+          <div class="ver_mas text-center">
+            <span class="lnr lnr-eye"><font-awesome-icon icon="fa-solid fa-eye" /></span>
           </div>
           <article class="text-left">
             <h5>{{ CardPropsFilm.title }}</h5>
@@ -126,7 +126,7 @@ export default {
 }
 
 .ver_mas {
-  background-color: #feb66c;
+  background-color: rgb(165, 243, 21);
   position: absolute;
   width: 100%;
   height: 20px;
@@ -146,12 +146,12 @@ export default {
 }
 
 .ver_mas span {
-  font-size: 40px;
-  color: #fff;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
   position: relative;
   margin: 0 auto;
   width: 100%;
-  top: 13px;
+  top: -4px;
 }
 
 /*hovers*/

@@ -8,7 +8,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold px-3">
             <li class="nav-item">
               <a class="nav-link active text-danger" aria-current="page" href="#">Home</a>
             </li>
@@ -21,9 +21,9 @@
             </li>
           </ul>
           <div class="input-group mb-3 mt-3 w-25">
-            <input type="text" class="form-control" v-model="select" @keyup.enter="$emit('search', select)"
+            <input type="text" class="form-control bg-black text-light" v-model="select" @keyup.enter="$emit('search', select)"
               placeholder="Search" aria-label="Example text with button addon" aria-describedby="button-addon1" />
-            <button class="btn text-white btn-outline-secondary" @click="$emit('search', select)" type="button"
+            <button class="btn colorButton text-secondary btn-outline-light" @click="$emit('search', select)" type="button"
               id="button-addon1">
               Search
             </button>
@@ -55,6 +55,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.colorButton{
+  border-color: rgb(53, 10, 3) ;
+}
+.form-control{
+  border-color: rgb(53, 10, 3) ;
+}
 .superContainer{
   height: 10vh;
 }
